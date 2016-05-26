@@ -1,5 +1,9 @@
 #!/bin/env bash
 
+__author__="Ludovic Duvaux"
+__maintainer__="Ludovic Duvaux"
+__license__="GPL_v3"
+
 ### usage:
 usage="Usage:
 $(basename "$0") [-hfoz] -g genome_file.txt -t target_file.txt -d gmap_directory
