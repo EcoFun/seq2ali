@@ -52,9 +52,13 @@ echo "$gmapdb_dum"
 if [ ! -f "$gmapdb_dum" ]; then
     printf "###### 1) Prepare gmap database for $gID\n."
     echo "gmap_build -d $gID $fgeno &> $root/buildGmapGenome.$gID.log"
-    gmap_build -d $gID $fgeno &> $root/buildGmapGenome.$gID.log
-    gzip -fv $root/buildGmapGenome.$gID.log
-    rm -r $dicf
+    if [ ! -d "$gmapd/build_logs/" ]; then
+        mkdir -p $gmapd/build_logs/
+        echo "mkdir -p $gmapd/build_logs/"
+    fi
+    gmap_build_log=$gmapd/build_logs/buildGmapGenome.$gID.log
+    gmap_build -d $gID $fgeno &> $gmap_build_log
+    gzip -fv $gmap_build_log
 else
     printf "###### 1) Pass preparation of gmap database for $gID (already set)\n\n"
 fi
