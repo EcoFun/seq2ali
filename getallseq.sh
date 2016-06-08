@@ -12,8 +12,8 @@ Wrapper allowing batch of getseq analyses: Takes a list of fasta files for
     target loci and retrieve corresponding sequences from a list of genomes.
 
 Options:
-    -d, --gmap-dir          directory containing gmap genome databases
-                            (only one)
+    -d, --gmap-dir          absolute path of the folder containing the
+                            gmap genomes.
     -f                      force locus/target processing (needed to analyse
                             new genomes) [false]
     -F                      force genome processing (force locus/target processing
