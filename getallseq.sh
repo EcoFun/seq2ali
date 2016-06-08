@@ -6,7 +6,7 @@ __license__="GPL_v3"
 
 ### usage:
 usage="Usage:
-$(basename "$0") [-hfoz] -g genome_file.txt -t target_file.txt -d gmap_directory
+$(basename "$0") [-h] [-fFz] [-o out_dir] -g genome_file.txt -t target_file.txt -d gmap_directory
 
 Wrapper allowing batch of getseq analyses: Takes a list of fasta files for 
     target loci and retrieve corresponding sequences from a list of genomes.
